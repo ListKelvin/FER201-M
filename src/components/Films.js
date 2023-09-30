@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 
 import { Films } from "../ListOfFilms";
+import { Link } from "react-router-dom";
 export default function Film() {
   const [film, setFilm] = useState([]);
   return (
@@ -12,15 +13,11 @@ export default function Film() {
             <h3>{film.title}</h3>
             <p className="title">{film.nation}</p> - <span>{film.year}</span>
             <p>
-              <button
-                onClick={() => {
-                  setFilm(film);
-                }}
-              >
-                <a href="#popup1" id="openPopUp">
-                  Detail
-                </a>
-              </button>
+              <Link to={`detail/${film.id}`}>
+                <p>
+                  <button>Detail</button>
+                </p>
+              </Link>
             </p>
           </div>
         </div>

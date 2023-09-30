@@ -1,5 +1,6 @@
 import React, { useContext } from "react";
 import { ThemeContext } from "./ThemeContext";
+import { Link } from "react-router-dom";
 
 export default function Navigation() {
   const { theme, toggle, dark } = useContext(ThemeContext);
@@ -8,18 +9,18 @@ export default function Navigation() {
       <nav style={{ backgroundColor: theme.background, color: theme.color }}>
         <ul>
           <li>
-            <a className="active" href="#home">
+            <Link className="active" to="/">
               Home
-            </a>
+            </Link>
           </li>
           <li>
-            <a href="#news">News</a>
+            <Link to="/news">News</Link>
           </li>
           <li>
-            <a href="#about">About</a>
+            <Link to="/about">About</Link>
           </li>
           <li>
-            <a href="#contact">Contact</a>
+            <Link to="/contact">Contact</Link>
           </li>
         </ul>
         <div style={{ position: "relative" }}>

@@ -28,7 +28,7 @@ function ThemeProvider({ children }) {
     dark ? setTheme(themes.dark) : setTheme(themes.light);
     // console.log('theme', theme)
     // console.log('dark', dark)
-  }, [dark, theme]);
+  }, [dark]);
 
   const toggle = () => {
     setDark(!dark);
