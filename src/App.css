@@ -2,24 +2,38 @@
   text-align: center;
 }
 
-ul {
+.App {
+  text-align: center;
+}
+
+nav {
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100px;
+}
+
+nav ul {
   display: flex;
   justify-content: flex-start;
   align-items: center;
-  background-color: #282c34;
+  transition: all 0.2s ease-in;
 }
 
-li {
+ul li {
   list-style: none;
+
+  > .active {
+    background-color: #6cdfff;
+  }
+}
+li a {
+  text-decoration: none;
   padding: 15px;
-  > a {
-    text-decoration: none;
-    color: white;
-    padding: 15px;
-  }
-  .active {
-    background-color: #a1a92c;
-  }
 }
 
 .App {
@@ -50,4 +64,57 @@ footer {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+.overlay {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.7);
+  transition: opacity 500ms;
+  visibility: hidden;
+  opacity: 0;
+}
+.overlay:target {
+  visibility: visible;
+  opacity: 1;
+}
+.popup {
+  margin: 70px auto;
+  padding: 5px;
+  background: #fff;
+  border-radius: 5px;
+  width: 30%;
+  /* max-height: 70%; */
+  position: relative;
+  transition: all 5s ease-in-out;
+}
+.popup img {
+  width: 70%;
+}
+.popup h2 {
+  margin-top: 0;
+  color: #333;
+  font-family: Tahoma, Arial, sans-serif;
+}
+.popup .close {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  transition: all 200ms;
+  font-size: 30px;
+  font-weight: bold;
+  text-decoration: none;
+  color: #333;
+}
+.popup .close:hover {
+  color: #06d85f;
+}
+.popup .content {
+  max-height: 30%;
+  overflow: auto;
+}
+.switch-mode {
+  padding: 1rem;
 }
