@@ -10,11 +10,11 @@ export default function Detail() {
   return (
     <div className="detail">
       <div className="product-card">
-        <div className="badge">{film.title}</div>
         <div className="product-tumb">
           <img src={`${film.image}`} alt={film.title} />
         </div>
         <div className="product-details">
+          <div className="badge">{film.title}</div>
           <h4>{film.nation}</h4>
           <div className="product-price">year: {film.year}</div>
           <p>{film.detail}</p>

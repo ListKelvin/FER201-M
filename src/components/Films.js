@@ -2,6 +2,7 @@ import React, { useState } from "react";
 
 import { Films } from "../ListOfFilms";
 import { Link } from "react-router-dom";
+import { Container } from "react-materialize";
 export default function Film() {
   const [film, setFilm] = useState([]);
   return (
